@@ -10,7 +10,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.movieapp.ui.components.models.buttons.LeadingIconData
+import com.example.movieapp.ui.models.buttons.LeadingIconData
 import com.example.movieapp.ui.theme.MovieAppTheme
 import com.example.movieapp.ui.theme.Paddings
 import com.example.movieapp.ui.theme.colorScheme

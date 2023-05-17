@@ -1,6 +1,6 @@
-package com.example.movieapp.ui.components.models
+package com.example.movieapp.ui.models
 
-import com.example.movieapp.ui.components.models.buttons.LeadingIconData
+import com.example.movieapp.ui.models.buttons.LeadingIconData
 
 sealed class DialogButton(
     open val title: String,

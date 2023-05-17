@@ -14,8 +14,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.em
-import com.example.movieapp.ui.components.models.DialogContent
-import com.example.movieapp.ui.components.models.DialogText
+import com.example.movieapp.ui.models.DialogContent
+import com.example.movieapp.ui.models.DialogText
 import com.example.movieapp.ui.theme.Paddings
 
 

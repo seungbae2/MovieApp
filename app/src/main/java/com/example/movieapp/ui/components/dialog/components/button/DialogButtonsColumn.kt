@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.movieapp.ui.components.models.DialogButton
+import com.example.movieapp.ui.models.DialogButton
 import com.example.movieapp.ui.components.movie.PrimaryButton
 import com.example.movieapp.ui.components.movie.SecondaryBorderlessButton
 import com.example.movieapp.ui.components.movie.SecondaryButton

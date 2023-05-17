@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.components.models
+package com.example.movieapp.ui.models
 
 sealed class DialogTitle(
     open val text: String

@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import com.example.movieapp.ui.components.models.DialogTitle
+import com.example.movieapp.ui.models.DialogTitle
 import com.example.movieapp.ui.theme.Paddings
 import com.example.movieapp.ui.theme.colorScheme
 import com.example.movieapp.ui.theme.h5Title

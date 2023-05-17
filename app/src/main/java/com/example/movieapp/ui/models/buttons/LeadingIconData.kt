@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.components.models.buttons
+package com.example.movieapp.ui.models.buttons
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

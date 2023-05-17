@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.viewinterop.AndroidView
-import com.example.movieapp.ui.components.models.DialogText
+import com.example.movieapp.ui.models.DialogText
 import com.example.movieapp.ui.theme.Paddings
 import com.example.movieapp.ui.util.getAnnotatedText
 

@@ -12,9 +12,9 @@ import androidx.compose.ui.graphics.Color
 import com.example.movieapp.ui.components.dialog.components.button.DialogButtonColumn
 import com.example.movieapp.ui.components.dialog.components.content.DialogContentWrapper
 import com.example.movieapp.ui.components.dialog.components.title.DialogTitleWrapper
-import com.example.movieapp.ui.components.models.DialogButton
-import com.example.movieapp.ui.components.models.DialogContent
-import com.example.movieapp.ui.components.models.DialogTitle
+import com.example.movieapp.ui.models.DialogButton
+import com.example.movieapp.ui.models.DialogContent
+import com.example.movieapp.ui.models.DialogTitle
 import com.example.movieapp.ui.theme.Paddings
 import com.example.movieapp.ui.theme.colorScheme
 

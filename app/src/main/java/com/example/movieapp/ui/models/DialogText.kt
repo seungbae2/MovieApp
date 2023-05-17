@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.components.models
+package com.example.movieapp.ui.models
 
 sealed class DialogText {
     abstract var text: String?
