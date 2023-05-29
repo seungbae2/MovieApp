@@ -1,39 +1,45 @@
 package com.example.movieapp.ui.components.movie
 
-import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Card
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberAsyncImagePainter
+import coil.request.ImageRequest
+import coil.size.Scale
 import com.example.movieapp.R
+import com.example.movieapp.features.common.entity.MovieFeedItemEntity
+import com.example.movieapp.features.feed.presentation.input.IFeedViewModelInput
 import com.example.movieapp.ui.theme.Paddings
 
 private val CARD_WIDTH = 150.dp
 private val ICON_SIZE = 12.dp
 @Composable
-fun MovieItem() {
+fun MovieItem(
+    movie: MovieFeedItemEntity,
+    input: IFeedViewModelInput
+) {
     Column(
         modifier = Modifier
             .width(CARD_WIDTH)
             .padding(Paddings.large)
     ) {
         Poster(
-            modifier = Modifier
-                .width(CARD_WIDTH)
+            thumbnailMovie = movie,
+            input = input
         )
 
         Text(
-            text = "The Lord of the Ring 1",
+            text = movie.title,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             modifier = Modifier.padding(
@@ -59,7 +65,7 @@ fun MovieItem() {
                 contentDescription = "rating icon"
             )
             Text(
-                text = "5.0",
+                text = "${movie.rating}",
                 style = MaterialTheme.typography.body2,
                 color = MaterialTheme.colors.onSurface.copy(
                     alpha = 0.5f
@@ -69,23 +75,33 @@ fun MovieItem() {
     }
 }
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun Poster(
-    modifier: Modifier
+    thumbnailMovie: MovieFeedItemEntity,
+    input: IFeedViewModelInput
 ) {
     Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(200.dp)
+        onClick = {
+            input.openDetail(thumbnailMovie.title)
+        }
+
     ) {
-        Box(
-            modifier = Modifier.background(Color.Blue)
+        Image(
+            painter = rememberAsyncImagePainter(
+                ImageRequest
+                    .Builder(LocalContext.current)
+                    .data(data = thumbnailMovie.thumbUrl)
+                    .apply {
+                        crossfade(true)
+                        scale(Scale.FILL)
+                    }.build()
+            ),
+            modifier = Modifier
+                .width(CARD_WIDTH)
+                .height(200.dp),
+            contentScale = ContentScale.FillHeight,
+            contentDescription = "Movie Poster Image"
         )
     }
-}
-
-@Preview
-@Composable
-fun MovieItemPreview() {
-    MovieItem()
 }
