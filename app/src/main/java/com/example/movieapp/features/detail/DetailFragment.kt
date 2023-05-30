@@ -7,17 +7,23 @@ import android.view.ViewGroup
 import androidx.compose.material.Text
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
 import com.example.movieapp.ui.theme.MovieAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DetailFragment: Fragment() {
+//    private val viewModel: MovieDetailViewModel by viewModels()
+    private val args: DetailFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        init()
+
         return ComposeView(requireContext()).apply {
             setContent {
                 MovieAppTheme {
@@ -25,5 +31,9 @@ class DetailFragment: Fragment() {
                 }
             }
         }
+    }
+
+    private fun init() {
+
     }
 }
