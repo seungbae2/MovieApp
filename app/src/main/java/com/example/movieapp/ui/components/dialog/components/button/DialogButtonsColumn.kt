@@ -8,10 +8,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.example.movieapp.ui.models.DialogButton
-import com.example.movieapp.ui.components.movie.PrimaryButton
-import com.example.movieapp.ui.components.movie.SecondaryBorderlessButton
-import com.example.movieapp.ui.components.movie.SecondaryButton
-import com.example.movieapp.ui.components.movie.UnderlinedTextButton
+import com.example.movieapp.ui.components.buttons.PrimaryButton
+import com.example.movieapp.ui.components.buttons.SecondaryBorderlessButton
+import com.example.movieapp.ui.components.buttons.SecondaryButton
+import com.example.movieapp.ui.components.buttons.UnderlinedTextButton
 import com.example.movieapp.ui.theme.Paddings
 
 @Composable

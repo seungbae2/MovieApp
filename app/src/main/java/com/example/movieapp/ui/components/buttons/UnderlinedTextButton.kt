@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.components.movie
+package com.example.movieapp.ui.components.buttons
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement

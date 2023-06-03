@@ -24,8 +24,8 @@ import com.example.movieapp.features.common.entity.MovieDetailEntity
 import com.example.movieapp.features.detail.presentation.input.IDetailViewModelInputs
 import com.example.movieapp.features.detail.presentation.output.MovieDetailState
 import com.example.movieapp.ui.components.movie.MovieMeta
-import com.example.movieapp.ui.components.movie.PrimaryButton
-import com.example.movieapp.ui.components.movie.SecondaryButton
+import com.example.movieapp.ui.components.buttons.PrimaryButton
+import com.example.movieapp.ui.components.buttons.SecondaryButton
 import com.example.movieapp.ui.theme.Paddings
 import com.example.movieapp.ui.util.getAnnotatedText
 

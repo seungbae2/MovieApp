@@ -4,6 +4,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@+id/feed_fragment">
 
+
     <fragment
         android:id="@+id/feed_fragment"
         android:name="com.example.movieapp.features.feed.FeedFragment"
@@ -12,10 +13,10 @@
             android:id="@+id/action_feed_to_detail"
             app:destination="@id/detail_fragment"
             app:launchSingleTop="true" />
-<!--        <action-->
-<!--            android:id="@+id/action_feed_to_info"-->
-<!--            app:destination="@id/info_fragment"-->
-<!--            app:launchSingleTop="true" />-->
+        <action
+            android:id="@+id/action_feed_to_info"
+            app:destination="@id/info_fragment"
+            app:launchSingleTop="true" />
 
     </fragment>
 
@@ -26,7 +27,40 @@
         <argument
             android:name="movieName"
             app:argType="string" />
-
+        <action
+            android:id="@+id/action_detail_to_rating"
+            app:destination="@id/rating_fragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_detail_to_imdb_dialog"
+            app:destination="@id/imdb_fragment"
+            app:launchSingleTop="true" />
     </fragment>
+
+    <dialog
+        android:id="@+id/rating_fragment"
+        android:name="com.example.movieapp.features.dialog.RatingDialogFragment"
+        android:label="Rating">
+        <argument
+            android:name="movieName"
+            app:argType="string" />
+        <argument
+            android:name="rating"
+            app:argType="float" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/imdb_fragment"
+        android:name="com.example.movieapp.features.dialog.IMDBDialogFragment"
+        android:label="IMDB">
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/info_fragment"
+        android:name="com.example.movieapp.features.dialog.InfoDialogFragment"
+        android:label="Notice"/>
 
 </navigation>
