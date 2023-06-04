@@ -4,7 +4,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@+id/feed_fragment">
 
-
     <fragment
         android:id="@+id/feed_fragment"
         android:name="com.example.movieapp.features.feed.FeedFragment"
